@@ -1,553 +1,707 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.standalone.min.css">
-  <link rel="stylesheet" href="now-ui-kit.css" type="text/css">
-  <link rel="stylesheet" href="assets/css/nucleo-icons.css" type="text/css">
-  <script src="assets/js/navbar-ontop.js"></script>
-  <link rel="icon" href="./assets/startquito-blanco.png">
-  <title>Let's START Quito</title>
-  <meta name="description" content="Evento Let's START Quito - Inspira a la próxima generación de emprendedores.">
-  <meta name="keywords" content="evento, startups, Quito, emprendedores, LATAM, Ecuador">
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X64T45DL7K"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-X64T45DL7K');
-</script>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1192527898437927');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1192527898437927&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-<!-- Start of HubSpot Embed Code -->
-<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/46851834.js"></script>
-<!-- End of HubSpot Embed Code -->
-  <style>
-    body {
-      background-color: #000;
-      color: #fff;
-      font-family: 'Arial', sans-serif;
-      text-align: center;
-      padding-top: 40px;
-    }
-
-    .countdown-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .countdown-item {
-      background-color: #333;
-      border-radius: 10px;
-      padding: 10px;
-      min-width: 60px;
-    }
-
-    .countdown-item span {
-      display: block;
-      font-size: rem;
-    }
-
-    .countdown-item small {
-      display: block;
-      font-size: 1rem;
-      margin-top: 10px;
-      color: #ffffff;
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 30px;
-    }
-
-    .card {
-      background-color: #222;
-      border: none;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
-
-    .card-header {
-      background-color: #333;
-      border-radius: 10px 10px 0 0;
-      cursor: pointer;
-    }
-
-    .card-body {
-      background-color: #444;
-      border-radius: 0 0 10px 10px;
-    }
-
-    .btn-link {
-      color: #fff;
-      text-decoration: none;
-      word-wrap: break-word;
-    }
-
-    .btn-link:hover {
-      text-decoration: underline;
-    }
-
-    .agenda-text {
-      font-size: 1.2rem;
-      text-align: left;
-      word-wrap: break-word;
-    }
-
-    .agenda-text p {
-      margin-bottom: 1px;
-    }
-
-    @media (max-width: 768px) {
-      .btn-link {
-        font-size: 1rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMF/izfvfJ9IRo2C4uJdKfQB0VbPHIR9Pv7wHnP" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" href="./assets/startquito-blanco.png">
+    <title>Let's START Quito</title>
+    <meta name="description" content="Evento Let's START Quito - Inspira a la próxima generación de emprendedores.">
+    <meta name="keywords" content="evento, startups, Quito, emprendedores, LATAM, Ecuador">
 </head>
-
-<body class="">
-  <nav class="navbar navbar-expand-lg bg-primary navbar-dark fixed-top">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12"><img class="cover" src="./assets/startquito-blanco.png" height="50"></div>
+<body class="bg-black text-white">
+ <!-- Navbar -->
+<nav class="fixed top-0 w-full bg-black bg-opacity-80 backdrop-blur-md z-50">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <!-- Logo -->
+      <img src="./assets/startquito-blanco.png" alt="Logo Start Quito" class="h-12">
+  
+      <!-- Desktop Navigation Links -->
+      <div class="hidden md:flex space-x-6">
+        <a href="#home" class="flex items-center text-white hover:text-purple-300 transition">
+          <i class="fa fa-home mr-2"></i> HOME
+        </a>
+        <a href="#about" class="flex items-center text-white hover:text-purple-300 transition">
+          <i class="fa fa-info-circle mr-2"></i> CONÓCENOS
+        </a>
+        <a href="#team" class="flex items-center text-white hover:text-purple-300 transition">
+          <i class="fa fa-users mr-2"></i> EQUIPO
+        </a>
+        <a href="#event-details" class="flex items-center text-white hover:text-purple-300 transition">
+          <i class="fa fa-calendar-alt mr-2"></i> AGENDA
+        </a>
+        <a href="#sponsors" class="flex items-center text-white hover:text-purple-300 transition">
+          <i class="fa fa-handshake mr-2"></i> SPONSORS
+        </a>
       </div>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNowUIKitFree">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse text-center justify-content-end" id="navbarNowUIKitFree">
-        <ul class="navbar-nav">
-          <li class="nav-item mx-1 align-items-center d-flex justify-content-center">
-            <a class="nav-link" href="#home">
-              <i class="fa fa-home fa-1x "></i>&nbsp;HOME</a>
-          </li>
-          <li class="nav-item mx-1 align-items-center d-flex justify-content-center">
-            <a class="nav-link" href="#about">
-              <i class="fa fa-book fa-1x"></i> CONÓCENOS</a>
-          </li>
-          <li class="nav-item mx-1 align-items-center d-flex justify-content-center">
-            <a class="nav-link" href="#team">
-              <i class="fa fa-users fa-1x "></i> EQUIPO</a>
-          </li>
-          <li class="nav-item mx-1 align-items-center d-flex justify-content-center">
-            <a class="nav-link" href="#event-details">
-              <i class="fa fa-users fa-1x "></i> AGENDA</a>
-          </li>
-          <li class="nav-item mx-1 align-items-center d-flex justify-content-center">
-            <a class="nav-link" href="#sponsors">
-              <i class="fa fa-users fa-1x "></i> SPONSORS</a>
-          </li>
-        </ul>
-        <a class="btn btn-light text-primary" href="#register">
-          <i class="fa fa-calendar-plus-o"></i>&nbsp;REGISTRO</a>
-        <ul class="navbar-nav flex-row justify-content-center mt-2 mt-md-0">
-          <li class="nav-item mx-1">
-            <a class="nav-link" href="https://instagram.com/startquito" data-placement="bottom" data-toggle="tooltip" title="Instagram Start Quito">
-              <i class="fa fa-fw fa-2x fa-instagram"></i>
-            </a>
-          </li>
-          <li class="nav-item ml-1">
-            <a class="nav-link" href="https://www.linkedin.com/company/start-quito" data-placement="bottom" data-toggle="tooltip" title="Linkedin Start Quito">
-              <i class="fa fa-fw fa-2x fa-linkedin"></i>
-            </a>
-          </li>
-        </ul>
+  
+      <!-- Register Button -->
+      <a href="#register" class="hidden md:inline-block bg-white text-black px-4 py-2 rounded hover:bg-gray-200 transition">
+        REGISTRO
+      </a>
+  
+      <!-- Social Icons for Mobile -->
+      <div class="flex md:hidden space-x-3">
+        <a href="https://instagram.com/startquito" class="text-white hover:text-purple-300">
+            <i class="fab fa-instagram fa-2x"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/start-quito" class="text-white hover:text-purple-300">
+            <i class="fab fa-linkedin fa-2x"></i>
+        </a>
       </div>
     </div>
   </nav>
-  <div class="py-5 text-center parallax cover" id="home" style="background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url(&quot;./assets/portadastartquito.svg&quot;); position: relative; background-position: 50% calc(50% + 0px); background-size: 100%, 100%; background-repeat: repeat, repeat;">
-    <div class="container d-flex flex-column">
-      <div class="row my-auto">
-        <div class="col-md-12 text-white " style="">
-          <img src="./assets/letsstartblanco.png" width="40%">
-          <br>
-          <p class="lead">by</p>
-          <div class="row">
-            <div class="col-md-6 col-6 text-right">
-                <img src="./assets/startquito-blanco.png" width="30%">
-            </div>
-            <div class="col-md-6 col-6 text-left">
-              <img src="./assets/logousfqblanco.png" width="30%">
-            </div>
-          </div>
-          <br>
-          <h3 class="mb-3">El Panorama de las startups en el Ecuador</h3>
-          <div class="countdown-container pb-5">
-            <div class="countdown-item">
-              <span id="days">00</span>
-              <small>DAYS</small>
-            </div>
-            <div class="countdown-item">
-              <span id="hours">00</span>
-              <small>HOURS</small>
-            </div>
-            <div class="countdown-item">
-              <span id="minutes">00</span>
-              <small>MINUTES</small>
-            </div>
-            <div class="countdown-item">
-              <span id="seconds">00</span>
-              <small>SECONDS</small>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <p class="lead"> <i class="fa fa-calendar"></i> 12 de Agosto 2024</p>
-            </div>
-            <div class="col-md-6">
-              <p class="lead"> <i class="fa fa-clock-o "></i> 3:30 pm - 7:00 pm</p>
-            </div>
-          </div>
-          <script>
-            const eventDate = new Date('August 12, 2024 15:30:00').getTime();
+  
+<!-- Home Section -->
+<div id="home" class="flex flex-col items-center justify-center min-h-screen bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url('./assets/portadastartquito.svg');">
+    <!-- Logo -->
+    <img src="./assets/letsstartblanco.png" alt="Let's Start Logo" class="w-1/3 mb-6 animate-fade-in-up">
+    
+    <!-- Title -->
+    <h3 class="text-3xl md:text-4xl font-semibold mb-6 animate-fade-in-up-delay">El Panorama de las startups en el Ecuador</h3>
+    
+    <!-- Partner Logos -->
+    <div class="flex justify-center space-x-8 mb-6 animate-fade-in-up-delay">
+      <img src="./assets/startquito-blanco.png" alt="Start Quito Logo" class="w-24 h-24 object-contain animate-bounce-slow">
+      <img src="./assets/logousfqblanco.png" alt="USFQ Logo" class="w-24 h-24 object-contain animate-bounce-slow">
+    </div>
+  
+    <!-- Countdown -->
+    <div class="flex space-x-6 mb-6 animate-fade-in-up-delay text-center">
+      <div class="text-lg font-bold">
+        <span id="days" class="text-3xl">00</span>
+        <p class="text-sm">DÍAS</p>
+      </div>
+      <div class="text-lg font-bold">
+        <span id="hours" class="text-3xl">00</span>
+        <p class="text-sm">HORAS</p>
+      </div>
+      <div class="text-lg font-bold">
+        <span id="minutes" class="text-3xl">00</span>
+        <p class="text-sm">MINUTOS</p>
+      </div>
+      <div class="text-lg font-bold">
+        <span id="seconds" class="text-3xl">00</span>
+        <p class="text-sm">SEGUNDOS</p>
+      </div>
+    </div>
+  
+    <script>
+      // Set the target date and time for the countdown (12 August 2024 at 3:30 PM)
+      const targetDate = new Date('August 12, 2024 15:30:00').getTime();
+  
+      // Update the countdown every second
+      const countdownInterval = setInterval(() => {
+        const now = new Date().getTime();
+        const timeRemaining = targetDate - now;
+  
+        // Calculate days, hours, minutes, and seconds
+        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+  
+        // Display the result in the respective elements
+        document.getElementById('days').textContent = days < 10 ? '0' + days : days;
+        document.getElementById('hours').textContent = hours < 10 ? '0' + hours : hours;
+        document.getElementById('minutes').textContent = minutes < 10 ? '0' + minutes : minutes;
+        document.getElementById('seconds').textContent = seconds < 10 ? '0' + seconds : seconds;
+  
+        // If the countdown is complete, stop the interval and display "00" in all fields
+        if (timeRemaining < 0) {
+          clearInterval(countdownInterval);
+          document.getElementById('days').textContent = '00';
+          document.getElementById('hours').textContent = '00';
+          document.getElementById('minutes').textContent = '00';
+          document.getElementById('seconds').textContent = '00';
+        }
+      }, 1000);
+    </script>
+    
+    <!-- Date and Time -->
+    <div class="mb-6 text-center animate-fade-in-up-delay">
+      <p class="text-lg"><i class="fa fa-calendar"></i> 12 de Agosto 2024 &nbsp;|&nbsp; <i class="fa fa-clock-o"></i> 3:30 pm - 7:00 pm</p>
+    </div>
+  
+    <!-- Location -->
+    <div class="mb-6 animate-fade-in-up-delay">
+      <a href="https://maps.app.goo.gl/AsUN7UswndHs2auu8" class="text-lg text-purple-400 hover:underline">
+        <i class="fa fa-map-marker"></i> Quito, Paseo San Francisco, Teatro Shakespeare
+      </a>
+    </div>
+  
+    <!-- Buttons -->
+    <div class="flex space-x-4 mb-6 animate-fade-in-up-delay">
+      <a href="#register" class="px-6 py-3 bg-white text-black rounded-lg hover:bg-gray-200 transition">REGISTRARSE</a>
+      <a href="http://app.start-fellowship.org/application/new?program=start-fellowship-pitching-competition" class="px-6 py-3 border border-white text-white rounded-lg hover:bg-purple-600 transition">PARTICIPAR</a>
+    </div>
+  
+    <!-- Call to Action -->
+    <p class="text-lg animate-fade-in-up-delay"><i class="fa fa-rocket"></i> Forma parte de las 10 startups más innovadoras del Let's Start</p>
+  </div>
+  
+  <!-- Animations -->
+  <style>
+    /* Fade-in Animation */
+    .animate-fade-in-up {
+      animation: fadeInUp 1s ease-in-out forwards;
+    }
+    
+    .animate-fade-in-up-delay {
+      animation: fadeInUp 1.5s ease-in-out forwards;
+    }
+  
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  
+    /* Bounce Animation for Logos */
+    .animate-bounce-slow {
+      animation: bounce 3s infinite ease-in-out;
+    }
+  
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+  </style>
+  
 
-            const updateCountdown = setInterval(() => {
-              const now = new Date().getTime();
-              const distance = eventDate - now;
 
-              const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-              const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-              const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-              const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+<!-- Partners Section -->
+<section id="sponsors"  class="py-10 bg-black flex justify-center">
+    <div class="swiper partners-carousel w-full max-w-screen-lg mx-6">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide flex justify-center items-center h-40">
+          <a href="#">
+            <img src="./assets/startquito-blanco.png" alt="StartQuito" class="logo-size1 object-contain">
+          </a>
+        </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide flex justify-center items-center h-40">
+          <a href="https://www.usfq.edu.ec/es">
+            <img src="./assets/logousfqblanco.png" alt="USFQ" class="logo-size1 object-contain">
+          </a>
+        </div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide flex justify-center items-center h-40">
+          <a href="https://www.startupgrind.com/quito/">
+            <img src="https://camaraemprendimiento.ec/assets/orgbn/11.png" alt="Startup Grind" class="logo-size object-contain">
+          </a>
+        </div>
+        <!-- Slide 4 -->
+        <div class="swiper-slide flex justify-center items-center h-40">
+          <a href="https://camaraemprendimiento.ec/">
+            <img src="./assets/logoblancocej2.png" alt="CEJ" class="logo-size object-contain">
+          </a>
+        </div>
+        <!-- Repeat Slides for Loop Effect -->
+        <div class="swiper-slide flex justify-center items-center h-40">
+          <a href="#">
+            <img src="./assets/startquito-blanco.png" alt="StartQuito" class="logo-size1 object-contain">
+          </a>
+        </div>
+        <div class="swiper-slide flex justify-center items-center h-40">
+          <a href="https://www.usfq.edu.ec/es">
+            <img src="./assets/logousfqblanco.png" alt="USFQ" class="logo-size1 object-contain">
+          </a>
+        </div>
+        <div class="swiper-slide flex justify-center items-center h-40">
+          <a href="https://www.startupgrind.com/quito/">
+            <img src="https://camaraemprendimiento.ec/assets/orgbn/11.png" alt="Startup Grind" class="logo-size object-contain">
+          </a>
+        </div>
+        <div class="swiper-slide flex justify-center items-center h-40">
+          <a href="https://camaraemprendimiento.ec/">
+            <img src="./assets/logoblancocej2.png" alt="CEJ" class="logo-size object-contain">
+          </a>
+        </div>
+      </div>
+    </div>
+</section>
 
-              document.getElementById("days").innerHTML = days;
-              document.getElementById("hours").innerHTML = hours;
-              document.getElementById("minutes").innerHTML = minutes;
-              document.getElementById("seconds").innerHTML = seconds;
+<!-- Estilos para unificar el tamaño de los logos -->
+<style>
+  .logo-size {
+    width: 7rem; /* Ajusta este valor según necesites */
+    height: 7rem;
+  }
+  .logo-size1 {
+    width: 8rem; /* Ajusta este valor según necesites */
+    height: 8rem;
+  }
+</style>
 
-              if (distance < 0) {
-                clearInterval(updateCountdown);
-                document.querySelector('.countdown-container').innerHTML = "El evento ha comenzado";
-              }
-            }, 1000);
-          </script>
-          <div class="col-md-12">
-            <a href="https://maps.app.goo.gl/AsUN7UswndHs2auu8" style="decoration: none; color:#ffffff;">
-              <p class="lead">
-                <i class="fa fa-map-marker "></i> Quito, Paseo San Francisco , Teatro Shakespeare
-              </p>
-            </a>
-          </div>
+<!-- Swiper CSS (opcional si necesitas estilos básicos) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-          <a class="btn rounded btn-lg btn-light text-dark mb-3" href="#register">REGISTRARSE</a>
-          <br>
-          <p class="lead">
-            <i class="fa fa-rocket "></i> Forma parte de las 10 startups más innovadoras del Let's Start
+<!-- Swiper JS antes de cerrar la etiqueta body -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+const swiper = new Swiper('.partners-carousel', {
+  slidesPerView: 4,
+  spaceBetween: 40, // Espacio uniforme entre logos
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 35,
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+    },
+  },
+});
+</script>
+
+
+<!-- Unified Section: About and What is Start -->
+<section id="about" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <!-- Section Title -->
+      <div class="text-center mb-12 animate-fade-in">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Acerca de Nosotros</h2>
+        <p class="text-lg text-gray-600">Conoce más sobre START Quito y nuestra red global de emprendimiento</p>
+      </div>
+  
+      <!-- Content Blocks: Acerca de Start Quito and ¿Qué es START? -->
+      <div class="flex flex-col md:flex-row items-center mb-12 bg-white shadow-lg rounded-lg overflow-hidden animate-slide-in-left">
+        <!-- Image -->
+        <div class="md:w-1/2 h-full">
+          <img src="assets/A7306499.jpg" alt="Imagen de evento Start Quito" class="w-full h-full object-cover">
+        </div>
+  
+        <!-- First Content Block: ¿Qué es START? -->
+        <div class="md:w-1/2 p-8">
+          <h3 class="text-purple-700 uppercase font-semibold text-sm mb-2">¿Qué es START?</h3>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">Impulsando el espíritu empresarial</h2>
+          <p class="text-gray-700 mb-6">
+            Fundada en 1996, START Global es la iniciativa líder en el fomento de la próxima generación de emprendedores para cambiar nuestro mundo a través del espíritu empresarial, la tecnología y la innovación. Están impulsados por la Universidad de San Galo (HSG), una de las principales universidades empresariales de Europa.
           </p>
-          <a class="btn rounded btn-lg btn-outline-light" href="http://app.start-fellowship.org/application/new?program=start-fellowship-pitching-competition">PARTICIPAR</a>
+          <a href="https://www.startglobal.org/" target="_blank" class="inline-block border border-purple-600 text-purple-600 rounded-lg py-2 px-4 text-sm font-semibold hover:bg-purple-600 hover:text-white transition">Conocer Start Global</a>
+        </div>
+  
+        <!-- Second Content Block: Acerca de Start Quito -->
+        <div class="md:w-1/2 p-8 animate-slide-in-right">
+          <h3 class="text-purple-700 uppercase font-semibold text-sm mb-2">Acerca de Start Quito</h3>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">Conectando el emprendimiento</h2>
+          <p class="text-gray-700 mb-6">
+            START Quito es una organización independiente estudiantil que forma parte de la red de START Network de la organización estudiantil START Global ubicada en San Galo, Suiza.
+          </p>
+          <a href="#registro" class="inline-block bg-purple-600 text-white rounded-lg py-2 px-4 text-sm font-semibold hover:bg-purple-700 transition">Registrarse</a>
         </div>
       </div>
     </div>
-  </div>
-  <div class="row py-1 text-center" style="display: flex; justify-content: center;" id="partners">
-        <div class="col-md-3 col-6 text-center" style="display: flex; justify-content: center; align-items: center; height: 130px;">
-            <a href="#">
-                <img src="./assets/startquito-blanco.png" width="35%">
+  </section>
+  
+  <!-- Page Container -->
+  <div class="flex items-center justify-center min-h-screen bg-white py-24" id="team">
+    <div class="container mx-auto px-6">
+      <!-- Section Header -->
+      <div class="text-center mb-12 animate-fade-in">
+        <h2 class="text-4xl font-bold text-gray-900">¿Quiénes Somos?</h2>
+        <p class="text-gray-700 mt-4">Un equipo comprometido en construir el futuro a través de la innovación y el liderazgo.</p>
+      </div>
+  
+      <!-- Team Members -->
+      <div class="flex flex-wrap justify-center gap-6">
+        <!-- Member #1: MARIA JOSÉ -->
+        <div class="w-full sm:w-6/12 md:w-4/12 lg:w-3/12 px-4 animate-fade-in-delay">
+          <div class="flex flex-col items-center">
+            <!-- Avatar -->
+            <a href="#" class="mx-auto">
+              <img class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100" src="assets/equipo/majo.jpg" alt="MARIA JOSÉ">
             </a>
-        </div>
-        <div class="col-md-3 col-6 text-center" style="display: flex; justify-content: center; align-items: center; height: 130px;">
-            <a href="https://www.usfq.edu.ec/es">
-                <img src="./assets/logousfqblanco.png" width="35%">
-            </a>
-        </div>
-        <div class="col-md-3 col-6 text-center" style="display: flex; justify-content: center; align-items: center; height: 130px;">
-            <a href="https://www.startupgrind.com/quito/">
-                <img src="https://camaraemprendimiento.ec/assets/orgbn/11.png" width="35%">
-            </a>
-        </div>
-        <div class="col-md-3 col-6 text-center" style="display: flex; justify-content: center; align-items: center; height: 130px;">
-            <a href="https://camaraemprendimiento.ec/">
-                <img src="./assets/logoblancocej2.png" width="35%">
-            </a>
-        </div>
-    </div>
-  <div class="py-5 text-dark" style="background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(&quot;assets/fondoquito.jpg&quot;); background-position: left top, left top; background-size: 100%, 100%; background-repeat: repeat, repeat;" id="about">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <h2 class="my-3">ACERCA DE START QUITO&nbsp;</h2>
-          <p class="lead mb-4"> START Quito es una organización independiente estudiantil que forma parte de la red de START Network de la organización estudiantil START Global ubicada en San Galo, Suiza. </p>
-          <a class="btn btn-primary rounded btn-lg btn-block py-2 my-4" href="#registro">REGISTRARSE</a>
-        </div>
-        <div class="col-md-6">
-          <img class="img-fluid d-block" src="assets/A7306499.jpg"> </div>
-      </div>
-      <div class="row">
-        <div class="mx-auto col-xl-8 col-md-10">
-          <h2 class="my-3 text-center">¿Qué es START?</h2>
-          <p class="lead text-center"> Fundada en 1996, START Global es la iniciativa líder en el fomento de la próxima generación de emprendedores para cambiar nuestro mundo a través del espíritu empresarial, la tecnología y la innovación. Están impulsados por la Universidad de San Galo (HSG), una de las principales universidades empresariales de Europa. </p><a class="btn btn-outline-primary rounded mx-2 btn-lg btn-block" href="https://www.startglobal.org/" target="blank">CONOCER START GLOBAL</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="py-5 text-center" id="team">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h2 class="my-3 text-center">¿Quienes Somos?</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 col-12 p-4"> <img class="img-fluid d-block mb-4 mx-auto" src="assets/equipo/majo.jpg" width="100" alt="Card image cap">
-          <h4>MARIA JOSÉ&nbsp;</h4>
-          <p class="lead">President</p>
-        </div>
-        <div class="col-lg-4 col-12 p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="assets/equipo/mato.jpg" width="100" alt="Card image cap">
-          <h4>MATEO</h4>
-          <p class="lead">Vice President</p>
-        </div>
-        <div class="col-lg-4 col-12 p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="assets/equipo/mari.jpg" width="100">
-          <h4>MARÍA EMILIA</h4>
-          <p class="lead">Head of Legal</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="py-3 text-center" id="event-details">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class="">Detalles del Evento</h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 p-4">
-          <h4>Fecha y Hora</h4>
-          <p>12 de Agosto 2024, 3:30 pm - 7:00 pm</p>
-        </div>
-        <div class="col-md-6 p-4">
-          <h4>Ubicación</h4>
-          <p>Teatro Shakespeare, Paseo San Francisco</p>
-        </div>
-      </div>
-      <div class="row">
-            <div class="col-md-12">
-                <h2 class="my-3 text-center">Agenda Actualizada</h2>
-                <div class="accordion" id="agendaAccordion">
-                    <div class="card">
-                        <div class="card-header" id="headingOne">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link agenda-text" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Feria de Emprendimientos</button>
-                            </h2>
-                        </div>
-                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#agendaAccordion" style="">
-                            <div class="card-body agenda-text">
-                                <p>Actividad: Feria de Emprendimientos</p>
-                                <p>Hora: 3:00 pm - 5:30 pm</p>
-                                <p>Detalle: Feria interactiva mientras se desarrolla la competencia de pitching</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingTwo">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link agenda-text collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Inicio Pitching Competition</button>
-                            </h2>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#agendaAccordion" style="">
-                            <div class="card-body agenda-text">
-                                <p>Actividad: Inicio Pitching Competition</p>
-                                <p>Hora: 3:30 pm</p>
-                                <p>Duración: 10 min</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingThree">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link agenda-text collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Pitching Competition</button>
-                            </h2>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#agendaAccordion" style="">
-                            <div class="card-body agenda-text">
-                                <p>Actividad: Pitching Competition</p>
-                                <p>Hora: 3:40 pm - 5:30 pm</p>
-                                <p>Detalle: 12 startups, 5 min de presentación, 5 min de preguntas</p>
-                                <p>Jurado Calificador: María José Vallejo, Sascha, Nicole</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingFour">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link agenda-text collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Premiación</button>
-                            </h2>
-                        </div>
-                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#agendaAccordion" style="">
-                            <div class="card-body agenda-text">
-                                <p>Actividad: Premiación</p>
-                                <p>Hora: 5:30 pm - 6:00 pm</p>
-                                <p>Detalle: Durante la decisión del jurado, los asistentes están invitados a participar de la feria de emprendimientos al 100%</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingFive">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link agenda-text collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">Inicio evento Let's START</button>
-                            </h2>
-                        </div>
-                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#agendaAccordion" style="">
-                            <div class="card-body agenda-text">
-                                <p>Actividad: Inauguración del Evento Let's START</p>
-                                <p>Hora: 5:30 pm - 6:00 pm</p>
-                                <p>Detalle: 
-                                    <ul>
-                                        <li>Agradecimiento a Sponsors</li>
-                                        <li>Presentación de START Quito</li>
-                                        <li>Introducción al primer Foro</li>
-                                    </ul>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingSix">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link agenda-text collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">Foro 1: Panorama startups LATAM</button>
-                            </h2>
-                        </div>
-                        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#agendaAccordion" style="">
-                            <div class="card-body agenda-text">
-                                <p>Hora: 6:00 pm - 6:20 pm</p>
-                                <p>Detalle: 15 min de foro, 5 min de icebreaker</p>
-                                <p>Speakers: Jose - Startup Grind, Ricardo Loor CTO Pardux, Maria Paulina Romo Presidenta Grupo Entregas, Mercedes Córdova CEO de MC Comunicaciones, Nathaly Vinueza CEO de WARMI</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingSeven">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link agenda-text collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">Foro 2: Panorama nacional</button>
-                            </h2>
-                        </div>
-                        <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#agendaAccordion" style="">
-                            <div class="card-body agenda-text">
-                                <p>Hora: 6:20 pm - 6:50 pm</p>
-                                <p>Detalle: 15 min de foro, 5 min de icebreaker</p>
-                                <p>Speakers: Andrés Medranda Morejón, Andrea Moya firma de abogados, Francisca Castellanos CEO de Crick, Marjorie Reyes Co-Founder de Taytta Hats</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingEight">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link agenda-text collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">Foro 3: Foro de Oportunidades</button>
-                            </h2>
-                        </div>
-                        <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#agendaAccordion" style="">
-                            <div class="card-body agenda-text">
-                                <p>Hora: 6:50 pm - 7:10 pm</p>
-                                <p>Detalle: 15 min de foro</p>
-                                <p>Speakers: Monserrat Viteri Líder del Programa Local en Endeavor Ecuador, Gonzalo Criollo Conquito Director General, Juan Esteban Kruger Labs</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingNine">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link agenda-text collapsed" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">Cierre del evento</button>
-                            </h2>
-                        </div>
-                        <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#agendaAccordion" style="">
-                            <div class="card-body agenda-text">
-                                <p>Hora: 7:15 pm</p>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Details -->
+            <div class="text-center mt-6">
+              <h4 class="text-gray-900 text-xl font-bold">MARIA JOSÉ</h4>
+              <p class="text-gray-700 font-light mb-4">President</p>
+                  <!-- Social Icons -->
+                  <div class="flex space-x-3 opacity-50 hover:opacity-100 transition-opacity duration-300">
+                    <a href="#" class="flex rounded-full hover:bg-indigo-50 h-10 w-10">
+                        <i class="fab fa-linkedin text-indigo-500 mx-auto mt-2"></i>
+                    </a>
+                    <a href="#" class="flex rounded-full hover:bg-blue-50 h-10 w-10">
+                        <i class="fab fa-instagram text-blue-300 mx-auto mt-2"></i>
+                    </a>
                 </div>
             </div>
+          </div>
         </div>
-    </div>
-  </div>
-  <div class="py-5 text-center bg-light" id="register">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h2 class="m-3 text-center">Registro</h2>
-          <script charset="utf-8" type="text/javascript" src="https://js.hsforms.net/forms/embed/v2.js"></script>
-          <script>
-            hbspt.forms.create({
-              region: "na1",
-              portalId: "46851834",
-              formId: "95468e82-f018-419a-ab04-497fa7a9c021"
-            });
-          </script>
+  
+        <!-- Member #2: MATEO -->
+        <div class="w-full sm:w-6/12 md:w-4/12 lg:w-3/12 px-4 animate-fade-in-delay-2">
+          <div class="flex flex-col items-center">
+            <a href="#" class="mx-auto">
+              <img class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100" src="assets/equipo/mato.jpg" alt="MATEO">
+            </a>
+            <div class="text-center mt-6">
+              <h4 class="text-gray-900 text-xl font-bold">MATEO</h4>
+              <p class="text-gray-700 font-light mb-4">Vice President</p>
+                  <!-- Social Icons -->
+                  <div class="flex space-x-3 opacity-50 hover:opacity-100 transition-opacity duration-300">
+                    <a href="#" class="flex rounded-full hover:bg-indigo-50 h-10 w-10">
+                        <i class="fab fa-linkedin text-indigo-500 mx-auto mt-2"></i>
+                    </a>
+                    <a href="#" class="flex rounded-full hover:bg-blue-50 h-10 w-10">
+                        <i class="fab fa-instagram text-blue-300 mx-auto mt-2"></i>
+                    </a>
+                </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Member #3: MARÍA EMILIA -->
+        <div class="w-full sm:w-6/12 md:w-4/12 lg:w-3/12 px-4 animate-fade-in-delay-3">
+          <div class="flex flex-col items-center">
+            <a href="#" class="mx-auto">
+              <img class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100" src="assets/equipo/mari.jpg" alt="MARÍA EMILIA">
+            </a>
+            <div class="text-center mt-6">
+              <h4 class="text-gray-900 text-xl font-bold">MARÍA EMILIA</h4>
+              <p class="text-gray-700 font-light mb-4">Head of Legal</p>
+                  <!-- Social Icons -->
+                  <div class="flex space-x-3 opacity-50 hover:opacity-100 transition-opacity duration-300">
+                    <a href="#" class="flex rounded-full hover:bg-indigo-50 h-10 w-10">
+                        <i class="fab fa-linkedin text-indigo-500 mx-auto mt-2"></i>
+                    </a>
+                    <a href="#" class="flex rounded-full hover:bg-blue-50 h-10 w-10">
+                        <i class="fab fa-instagram text-blue-300 mx-auto mt-2"></i>
+                    </a>
+                </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="pt-5 bg-dark">
-    <div class="container">
-      <div class="row mt-4 py-5">
-        <div class="col-md-12 text-center">
-          <h3 class="mb-5 text-center">Gracias por formar parte!</h3>
-          <a href="https://www.instagram.com/startquito" target="_blank" title="Follow us">
-            <button class="btn btn-icon rounded btn-lg btn-light mx-1 btn-twitter" 
-                    type="button" 
-                    data-placement="top" 
-                    data-toggle="tooltip" 
-                    title="Síguenos en Instagram Start Quito">
-                <i class="fa fa-ig fa-2x fa-instagram" style="color:pink;"></i>
-            </button>
-        </a>
+  
+  <!-- Animations -->
+  <style>
+    .animate-fade-in {
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+    .animate-slide-in-left {
+      animation: slideInLeft 1.5s ease-in-out forwards;
+    }
+    .animate-slide-in-right {
+      animation: slideInRight 1.5s ease-in-out forwards;
+    }
+    .animate-fade-in-delay {
+      animation: fadeIn 1s 0.5s ease-in-out forwards;
+    }
+    .animate-fade-in-delay-2 {
+      animation: fadeIn 1s 1s ease-in-out forwards;
+    }
+    .animate-fade-in-delay-3 {
+      animation: fadeIn 1s 1.5s ease-in-out forwards;
+    }
+  
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  </style>
+  
+<!-- Event Details Section -->
+<section id="event-details" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <!-- Section Header -->
+      <div class="text-center mb-12 animate-fade-in">
+        <h1 class="text-3xl font-bold text-gray-900">Detalles del Evento</h1>
+      </div>
+      
+      <!-- Event Details Cards -->
+      <div class="flex flex-col md:flex-row md:justify-center gap-8">
         
-        <a href="https://www.linkedin.com/company/start-quito" target="_blank" title="Follow us">
-            <button class="btn btn-icon rounded btn-lg btn-light mx-1 btn-linkedin" 
-                    type="button" 
-                    data-placement="top" 
-                    data-toggle="tooltip" 
-                    title="Síguenos en Linkedin Start Quito">
-                <i class="fa fa-fw fa-2x fa-linkedin"></i>
-            </button>
-        </a>
+        <!-- Card: Fecha y Hora -->
+        <div class="bg-white rounded-lg shadow-lg p-6 w-full md:w-1/3 flex flex-col items-center text-center animate-slide-in-left">
+          <!-- Icon -->
+          <div class="bg-purple-100 rounded-full p-4 mb-4 animate-bounce-once">
+            <i class="fas fa-calendar-alt text-purple-600 text-3xl"></i> <!-- Cambié a Font Awesome -->
+          </div>
+          <!-- Content -->
+          <h4 class="text-xl font-semibold text-gray-800 mb-2">Fecha y Hora</h4>
+          <p class="text-gray-600">12 de Agosto 2024, 3:30 pm - 7:00 pm</p>
         </div>
-      </div>
-      <div class="row mt-5">
-        <div class="col-12 text-center">© 2024, Desarrollado por <a href="https://www.camaraemprendimiento.ec/" target="_blank" class="text-white text-center">camaraemprendimiento.ec</a>
+        
+        <!-- Card: Ubicación -->
+        <div class="bg-white rounded-lg shadow-lg p-6 w-full md:w-1/3 flex flex-col items-center text-center animate-slide-in-right">
+          <!-- Icon -->
+          <div class="bg-purple-100 rounded-full p-4 mb-4 animate-bounce-once">
+            <i class="fas fa-map-marker-alt text-purple-600 text-3xl"></i> <!-- Cambié a Font Awesome -->
+          </div>
+          <!-- Content -->
+          <h4 class="text-xl font-semibold text-gray-800 mb-2">Ubicación</h4>
+          <p class="text-gray-600">Teatro Shakespeare, Paseo San Francisco</p>
         </div>
-        <div> </div>
       </div>
     </div>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <script src="assets/js/parallax.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.js"></script>
-  <script>
-    $(document).ready(function() {
-      $('[data-toggle="popover"]').popover();
-      $('[data-toggle="tooltip"]').tooltip();
-      $('#datepicker-example').datepicker({
-        calendarWeeks: true,
-        autoclose: true,
-        todayHighlight: true
-      });
-    });
-  </script>
-</body>
+</section>
 
+  <!-- Animations -->
+  <style>
+    /* General fade-in animation */
+    .animate-fade-in {
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+  
+    /* Slide-in animations */
+    .animate-slide-in-left {
+      animation: slideInLeft 1.5s ease-in-out forwards;
+    }
+  
+    .animate-slide-in-right {
+      animation: slideInRight 1.5s ease-in-out forwards;
+    }
+  
+    /* Bounce animation for icons */
+    .animate-bounce-once {
+      animation: bounce 1s ease-in-out forwards;
+    }
+  
+    /* Keyframes */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-15px);
+      }
+      60% {
+        transform: translateY(-7px);
+      }
+    }
+  </style>
+  
+
+<!-- Timeline Section -->
+<section class="timeline-section py-16 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <!-- Title -->
+      <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Agenda Actualizada</h2>
+      
+      <!-- Timeline -->
+      <ol class="relative border-l border-gray-300">
+  
+        <!-- Timeline Item 1 -->
+        <li class="mb-10 ml-8 bg-white p-6 rounded-lg shadow-md border border-gray-200">
+          <span class="absolute flex items-center justify-center w-6 h-6 bg-purple-100 rounded-full -left-3 ring-8 ring-white">
+            <i class="fas fa-calendar-alt text-purple-600"></i>
+          </span>
+          <time class="block text-sm font-semibold text-purple-700 mb-2">3:00 pm - 5:30 pm</time>
+          <h3 class="text-lg font-semibold text-gray-900 mb-1">Feria de Emprendimientos</h3>
+          <p class="text-base font-normal text-gray-600">Feria interactiva mientras se desarrolla la competencia de pitching.</p>
+        </li>
+  
+        <!-- Timeline Item 2 -->
+        <li class="mb-10 ml-8 bg-white p-6 rounded-lg shadow-md border border-gray-200">
+          <span class="absolute flex items-center justify-center w-6 h-6 bg-purple-100 rounded-full -left-3 ring-8 ring-white">
+            <i class="fas fa-flag-checkered text-purple-600"></i>
+          </span>
+          <time class="block text-sm font-semibold text-purple-700 mb-2">3:30 pm</time>
+          <h3 class="text-lg font-semibold text-gray-900 mb-1">Inicio Pitching Competition</h3>
+          <p class="text-base font-normal text-gray-600">Duración: 10 min.</p>
+        </li>
+  
+        <!-- Timeline Item 3 -->
+        <li class="mb-10 ml-8 bg-white p-6 rounded-lg shadow-md border border-gray-200">
+          <span class="absolute flex items-center justify-center w-6 h-6 bg-purple-100 rounded-full -left-3 ring-8 ring-white">
+            <i class="fas fa-trophy text-purple-600"></i>
+          </span>
+          <time class="block text-sm font-semibold text-purple-700 mb-2">3:40 pm - 5:30 pm</time>
+          <h3 class="text-lg font-semibold text-gray-900 mb-1">Pitching Competition</h3>
+          <p class="text-base font-normal text-gray-600">12 startups, 5 min de presentación, 5 min de preguntas. Jurado Calificador: María José Vallejo, Sascha, Nicole.</p>
+        </li>
+  
+        <!-- Timeline Item 4 -->
+        <li class="mb-10 ml-8 bg-white p-6 rounded-lg shadow-md border border-gray-200">
+          <span class="absolute flex items-center justify-center w-6 h-6 bg-purple-100 rounded-full -left-3 ring-8 ring-white">
+            <i class="fas fa-medal text-purple-600"></i>
+          </span>
+          <time class="block text-sm font-semibold text-purple-700 mb-2">5:30 pm - 6:00 pm</time>
+          <h3 class="text-lg font-semibold text-gray-900 mb-1">Premiación</h3>
+          <p class="text-base font-normal text-gray-600">Durante la decisión del jurado, los asistentes están invitados a participar de la feria de emprendimientos al 100%.</p>
+        </li>
+  
+        <!-- Timeline Item 5 -->
+        <li class="mb-10 ml-8 bg-white p-6 rounded-lg shadow-md border border-gray-200">
+          <span class="absolute flex items-center justify-center w-6 h-6 bg-purple-100 rounded-full -left-3 ring-8 ring-white">
+            <i class="fas fa-rocket text-purple-600"></i>
+          </span>
+          <time class="block text-sm font-semibold text-purple-700 mb-2">5:30 pm - 6:00 pm</time>
+          <h3 class="text-lg font-semibold text-gray-900 mb-1">Inicio evento Let's START</h3>
+          <p class="text-base font-normal text-gray-600">Inauguración del Evento Let's START:</p>
+          <ul class="list-disc list-inside text-gray-600 pl-5">
+            <li>Agradecimiento a Sponsors</li>
+            <li>Presentación de START Quito</li>
+            <li>Introducción al primer Foro</li>
+          </ul>
+        </li>
+  
+        <!-- Timeline Item 6 -->
+        <li class="mb-10 ml-8 bg-white p-6 rounded-lg shadow-md border border-gray-200">
+          <span class="absolute flex items-center justify-center w-6 h-6 bg-purple-100 rounded-full -left-3 ring-8 ring-white">
+            <i class="fas fa-comments text-purple-600"></i>
+          </span>
+          <time class="block text-sm font-semibold text-purple-700 mb-2">6:00 pm - 6:20 pm</time>
+          <h3 class="text-lg font-semibold text-gray-900 mb-1">Foro 1: Panorama startups LATAM</h3>
+          <p class="text-base font-normal text-gray-600">15 min de foro, 5 min de icebreaker. Speakers: Jose - Startup Grind, Ricardo Loor CTO Pardux, Maria Paulina Romo Presidenta Grupo Entregas, Mercedes Córdova CEO de MC Comunicaciones, Nathaly Vinueza CEO de WARMI.</p>
+        </li>
+  
+        <!-- Timeline Item 7 -->
+        <li class="mb-10 ml-8 bg-white p-6 rounded-lg shadow-md border border-gray-200">
+          <span class="absolute flex items-center justify-center w-6 h-6 bg-purple-100 rounded-full -left-3 ring-8 ring-white">
+            <i class="fas fa-comments text-purple-600"></i>
+          </span>
+          <time class="block text-sm font-semibold text-purple-700 mb-2">6:20 pm - 6:50 pm</time>
+          <h3 class="text-lg font-semibold text-gray-900 mb-1">Foro 2: Panorama nacional</h3>
+          <p class="text-base font-normal text-gray-600">15 min de foro, 5 min de icebreaker. Speakers: Andrés Medranda Morejón, Andrea Moya firma de abogados, Francisca Castellanos CEO de Crick, Marjorie Reyes Co-Founder de Taytta Hats.</p>
+        </li>
+  
+        <!-- Timeline Item 8 -->
+        <li class="mb-10 ml-8 bg-white p-6 rounded-lg shadow-md border border-gray-200">
+          <span class="absolute flex items-center justify-center w-6 h-6 bg-purple-100 rounded-full -left-3 ring-8 ring-white">
+            <i class="fas fa-comments text-purple-600"></i>
+          </span>
+          <time class="block text-sm font-semibold text-purple-700 mb-2">6:50 pm - 7:10 pm</time>
+          <h3 class="text-lg font-semibold text-gray-900 mb-1">Foro 3: Foro de Oportunidades</h3>
+          <p class="text-base font-normal text-gray-600">15 min de foro. Speakers: Monserrat Viteri Líder del Programa Local en Endeavor Ecuador, Gonzalo Criollo Conquito Director General, Juan Esteban Kruger Labs.</p>
+        </li>
+  
+        <!-- Timeline Item 9 -->
+        <li class="mb-10 ml-8 bg-white p-6 rounded-lg shadow-md border border-gray-200">
+          <span class="absolute flex items-center justify-center w-6 h-6 bg-purple-100 rounded-full -left-3 ring-8 ring-white">
+            <i class="fas fa-flag-checkered text-purple-600"></i>
+          </span>
+          <time class="block text-sm font-semibold text-purple-700 mb-2">7:15 pm</time>
+          <h3 class="text-lg font-semibold text-gray-900 mb-1">Cierre del evento</h3>
+        </li>
+  
+      </ol>
+    </div>
+</section>
+
+
+    <!-- Registration Section -->
+    <section id="register" class="py-20 bg-gray-50 text-center">
+        <div class="container mx-auto px-6">
+        <!-- Title -->
+        <div class="mb-10">
+            <h2 class="text-3xl font-bold text-gray-900">Registro</h2>
+            <p class="text-gray-600 mt-2">Inscríbete para formar parte del evento.</p>
+        </div>
+        <!-- Form Embed -->
+        <div class="w-full max-w-3xl mx-auto bg-white shadow-md rounded-lg p-8">
+            <!-- Embed Script for HubSpot Form -->
+            <script charset="utf-8" type="text/javascript" src="https://js.hsforms.net/forms/embed/v2.js"></script>
+            <script>
+            hbspt.forms.create({
+                region: "na1",
+                portalId: "46851834",
+                formId: "95468e82-f018-419a-ab04-497fa7a9c021"
+            });
+            </script>
+        </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+<footer class="bg-gray-900 text-gray-100 pt-10">
+    <div class="container mx-auto px-6">
+      <!-- Gracias y Redes Sociales -->
+      <div class="text-center">
+        <h3 class="text-2xl font-semibold mb-5">Gracias por formar parte!</h3>
+        <div class="flex justify-center space-x-4 mb-6">
+          <a href="https://www.instagram.com/startquito" target="_blank" title="Instagram Start Quito" class="text-pink-500 hover:text-pink-400 transition duration-300">
+            <i class="fab fa-instagram fa-2x"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/start-quito" target="_blank" title="LinkedIn Start Quito" class="text-blue-500 hover:text-blue-400 transition duration-300">
+            <i class="fab fa-linkedin fa-2x"></i>
+          </a>
+        </div>
+      </div>
+      <!-- Links y Recursos Adicionales -->
+      <div class="text-center text-gray-400 border-t border-gray-700 pt-6">
+        <p class="text-sm">
+          © 2024, Desarrollado por 
+          <a href="https://www.camaraemprendimiento.ec/" target="_blank" class="text-purple-500 hover:text-purple-400 transition duration-300">camaraemprendimiento.ec</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  </body>
+  
 </html>
