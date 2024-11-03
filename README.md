@@ -1,8 +1,3 @@
-Aquí tienes el contenido del archivo `README.txt` para tu proyecto:
-
----
-
-**README.txt**
 
 # Let's START Quito - Evento de Emprendimiento
 
@@ -80,6 +75,3 @@ Para desplegar esta página en la web:
 - [Font Awesome](https://fontawesome.com/) - Documentación y lista de iconos disponibles.
 - [Swiper.js](https://swiperjs.com/) - Documentación para personalizar el carrusel de patrocinadores.
 
----
-
-Este archivo debe guardarse como `README.txt` en el directorio raíz del proyecto.
