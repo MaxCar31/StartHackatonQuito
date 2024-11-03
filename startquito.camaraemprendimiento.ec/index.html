@@ -1,16 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMF/izfvfJ9IRo2C4uJdKfQB0VbPHIR9Pv7wHnP" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="icon" href="./assets/startquito-blanco.png">
-    <title>Let's START Quito</title>
-    <meta name="description" content="Evento Let's START Quito - Inspira a la próxima generación de emprendedores.">
-    <meta name="keywords" content="evento, startups, Quito, emprendedores, LATAM, Ecuador">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS y fuentes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMF/izfvfJ9IRo2C4uJdKfQB0VbPHIR9Pv7wHnP" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="./assets/startquito-blanco.png">
+
+  <!-- Título optimizado -->
+  <title>Evento Let's START Quito | Impulsando Emprendimientos en Ecuador</title>
+
+  <!-- Meta descripción optimizada -->
+  <meta name="description" content="Únete al Evento Let's START Quito el 12 de agosto de 2024 y sé parte de la próxima generación de emprendedores en Ecuador y LATAM.">
+
+  <!-- Open Graph para redes sociales -->
+  <meta property="og:title" content="Evento Let's START Quito | Impulsando Emprendimientos en Ecuador">
+  <meta property="og:description" content="Únete al Evento Let's START Quito el 12 de agosto de 2024 y sé parte de la próxima generación de emprendedores en Ecuador y LATAM.">
+  <meta property="og:image" content="https://tusitio.com/assets/imagen-compartida.png">
+  <meta property="og:url" content="https://tusitio.com">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Evento Let's START Quito | Impulsando Emprendimientos en Ecuador">
+  <meta name="twitter:description" content="Únete al Evento Let's START Quito el 12 de agosto de 2024 y sé parte de la próxima generación de emprendedores en Ecuador y LATAM.">
+  <meta name="twitter:image" content="https://tusitio.com/assets/imagen-compartida.png">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://tusitio.com">
+
+  <!-- Datos estructurados (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Evento Let's START Quito | Impulsando Emprendimientos en Ecuador",
+    "startDate": "2024-08-12T15:30:00-05:00",
+    "endDate": "2024-08-12T19:00:00-05:00",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "location": {
+      "@type": "Place",
+      "name": "Teatro Shakespeare, Paseo San Francisco",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Paseo San Francisco, Cumbayá",
+        "addressLocality": "Quito",
+        "addressCountry": "EC"
+      }
+    },
+    "image": [
+      "https://tusitio.com/assets/imagen-compartida.png"
+     ],
+    "description": "Participa en el Evento Let's START Quito y sé parte de la próxima generación de emprendedores en Ecuador y LATAM.",
+    "offers": {
+      "@type": "Offer",
+      "url": "https://tusitio.com/registro",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "validFrom": "2023-10-01T12:00"
+    },
+    "performer": {
+      "@type": "Organization",
+      "name": "START Quito"
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "START Quito",
+      "url": "https://tusitio.com"
+    }
+  }
+  </script>
 </head>
+
 <body class="bg-black text-white">
  <!-- Navbar -->
 <nav class="fixed top-0 w-full bg-black bg-opacity-80 backdrop-blur-md z-50">
@@ -64,8 +132,8 @@
     
     <!-- Partner Logos -->
     <div class="flex justify-center space-x-8 mb-6 animate-fade-in-up-delay">
-      <img src="./assets/startquito-blanco.png" alt="Start Quito Logo" class="w-24 h-24 object-contain animate-bounce-slow">
-      <img src="./assets/logousfqblanco.png" alt="USFQ Logo" class="w-24 h-24 object-contain animate-bounce-slow">
+      <img src="./assets/startquito-blanco.png" alt="Start Quito Logo" class="w-32 h-32 object-contain animate-bounce-slow">
+      <img src="./assets/logousfqblanco.png" alt="USFQ Logo" class="w-32 h-32 object-contain animate-bounce-slow">
     </div>
   
     <!-- Countdown -->
@@ -696,7 +764,7 @@ const swiper = new Swiper('.partners-carousel', {
       <!-- Links y Recursos Adicionales -->
       <div class="text-center text-gray-400 border-t border-gray-700 pt-6">
         <p class="text-sm">
-          © 2024, Desarrollado por 
+          © 2024, Desarrollado por:
           <a href="https://www.camaraemprendimiento.ec/" target="_blank" class="text-purple-500 hover:text-purple-400 transition duration-300">camaraemprendimiento.ec</a>
         </p>
       </div>
