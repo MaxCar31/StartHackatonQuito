@@ -41,8 +41,8 @@ Este proyecto es una página web diseñada para el evento **Let's START Quito**,
 
 1. **Descarga o Clona el Repositorio**:
    ```bash
-   git clone <URL_DEL_REPOSITORIO>
-   cd <NOMBRE_DEL_PROYECTO>
+   git clone https://github.com/MaxCar31/StartHackatonQuito.git
+   cd StartHackatonQuito
    ```
 
 2. **Estructura de Archivos**:
