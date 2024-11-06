@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMF/izfvfJ9IRo2C4uJdKfQB0VbPHIR9Pv7wHnP" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
   
   <!-- Favicon -->
   <link rel="icon" href="./assets/startquito-blanco.png">
@@ -155,38 +156,10 @@
         <p class="text-sm">SEGUNDOS</p>
       </div>
     </div>
-  
-    <script>
-      // Set the target date and time for the countdown (12 August 2024 at 3:30 PM)
-      const targetDate = new Date('August 12, 2024 15:30:00').getTime();
-  
-      // Update the countdown every second
-      const countdownInterval = setInterval(() => {
-        const now = new Date().getTime();
-        const timeRemaining = targetDate - now;
-  
-        // Calculate days, hours, minutes, and seconds
-        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-  
-        // Display the result in the respective elements
-        document.getElementById('days').textContent = days < 10 ? '0' + days : days;
-        document.getElementById('hours').textContent = hours < 10 ? '0' + hours : hours;
-        document.getElementById('minutes').textContent = minutes < 10 ? '0' + minutes : minutes;
-        document.getElementById('seconds').textContent = seconds < 10 ? '0' + seconds : seconds;
-  
-        // If the countdown is complete, stop the interval and display "00" in all fields
-        if (timeRemaining < 0) {
-          clearInterval(countdownInterval);
-          document.getElementById('days').textContent = '00';
-          document.getElementById('hours').textContent = '00';
-          document.getElementById('minutes').textContent = '00';
-          document.getElementById('seconds').textContent = '00';
-        }
-      }, 1000);
-    </script>
+
+    <!-- Script para el contador regresivo -->
+
+    <script src="js/ConteoRegresivo.js"></script>
     
     <!-- Date and Time -->
     <div class="mb-6 text-center animate-fade-in-up-delay">
@@ -210,45 +183,6 @@
     <p class="text-lg animate-fade-in-up-delay"><i class="fa fa-rocket"></i> Forma parte de las 10 startups más innovadoras del Let's Start</p>
   </div>
   
-  <!-- Animations -->
-  <style>
-    /* Fade-in Animation */
-    .animate-fade-in-up {
-      animation: fadeInUp 1s ease-in-out forwards;
-    }
-    
-    .animate-fade-in-up-delay {
-      animation: fadeInUp 1.5s ease-in-out forwards;
-    }
-  
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  
-    /* Bounce Animation for Logos */
-    .animate-bounce-slow {
-      animation: bounce 3s infinite ease-in-out;
-    }
-  
-    @keyframes bounce {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-10px);
-      }
-    }
-  </style>
-  
-
-
 <!-- Partners Section -->
 <section id="sponsors"  class="py-10 bg-black flex justify-center">
     <div class="swiper partners-carousel w-full max-w-screen-lg mx-6">
@@ -302,48 +236,14 @@
     </div>
 </section>
 
-<!-- Estilos para unificar el tamaño de los logos -->
-<style>
-  .logo-size {
-    width: 7rem; /* Ajusta este valor según necesites */
-    height: 7rem;
-  }
-  .logo-size1 {
-    width: 8rem; /* Ajusta este valor según necesites */
-    height: 8rem;
-  }
-</style>
+
 
 <!-- Swiper CSS (opcional si necesitas estilos básicos) -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 <!-- Swiper JS antes de cerrar la etiqueta body -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-const swiper = new Swiper('.partners-carousel', {
-  slidesPerView: 4,
-  spaceBetween: 40, // Espacio uniforme entre logos
-  loop: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  breakpoints: {
-    640: {
-      slidesPerView: 2,
-      spaceBetween: 30,
-    },
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 35,
-    },
-    1024: {
-      slidesPerView: 4,
-      spaceBetween: 40,
-    },
-  },
-});
-</script>
+<script src="js/carrucel.js"> </script>
 
 
 <!-- Unified Section: About and What is Start -->
@@ -466,56 +366,7 @@ const swiper = new Swiper('.partners-carousel', {
       </div>
     </div>
   </div>
-  
-  <!-- Animations -->
-  <style>
-    .animate-fade-in {
-      animation: fadeIn 1s ease-in-out forwards;
-    }
-    .animate-slide-in-left {
-      animation: slideInLeft 1.5s ease-in-out forwards;
-    }
-    .animate-slide-in-right {
-      animation: slideInRight 1.5s ease-in-out forwards;
-    }
-    .animate-fade-in-delay {
-      animation: fadeIn 1s 0.5s ease-in-out forwards;
-    }
-    .animate-fade-in-delay-2 {
-      animation: fadeIn 1s 1s ease-in-out forwards;
-    }
-    .animate-fade-in-delay-3 {
-      animation: fadeIn 1s 1.5s ease-in-out forwards;
-    }
-  
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-  
-    @keyframes slideInLeft {
-      from {
-        opacity: 0;
-        transform: translateX(-50px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-  
-    @keyframes slideInRight {
-      from {
-        opacity: 0;
-        transform: translateX(50px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-  </style>
-  
+
 <!-- Event Details Section -->
 <section id="event-details" class="py-16 bg-gray-100">
     <div class="container mx-auto px-6">
@@ -551,69 +402,6 @@ const swiper = new Swiper('.partners-carousel', {
       </div>
     </div>
 </section>
-
-  <!-- Animations -->
-  <style>
-    /* General fade-in animation */
-    .animate-fade-in {
-      animation: fadeIn 1s ease-in-out forwards;
-    }
-  
-    /* Slide-in animations */
-    .animate-slide-in-left {
-      animation: slideInLeft 1.5s ease-in-out forwards;
-    }
-  
-    .animate-slide-in-right {
-      animation: slideInRight 1.5s ease-in-out forwards;
-    }
-  
-    /* Bounce animation for icons */
-    .animate-bounce-once {
-      animation: bounce 1s ease-in-out forwards;
-    }
-  
-    /* Keyframes */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-  
-    @keyframes slideInLeft {
-      from {
-        opacity: 0;
-        transform: translateX(-50px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-  
-    @keyframes slideInRight {
-      from {
-        opacity: 0;
-        transform: translateX(50px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-  
-    @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-      }
-      40% {
-        transform: translateY(-15px);
-      }
-      60% {
-        transform: translateY(-7px);
-      }
-    }
-  </style>
-  
 
 <!-- Timeline Section -->
 <section class="timeline-section py-16 bg-gray-100">
