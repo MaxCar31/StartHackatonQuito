@@ -23,9 +23,9 @@ jobs:
           npm run build
         
       - name: deploy to fpt
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: airvzxf/ftp-deployment-action@latest
         with:
           server: startquito.camaraemprendimiento.ec
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: startquito.camaraemprendimiento.ec/dist/
+          local-dir: "./startquito.camaraemprendimiento.ec/dist/"
