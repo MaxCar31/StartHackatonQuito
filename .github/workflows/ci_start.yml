@@ -15,13 +15,11 @@ jobs:
 
       - name: install dependencies
         uses: actions/setup-node@v3
-        run: |
-          cd startquito.camaraemprendimiento.ec
-          npm install
-
+        
       - name: build project
         run: |
           cd startquito.camaraemprendimiento.ec
+          npm install
           npm run build
         
       - name: deploy to fpt
