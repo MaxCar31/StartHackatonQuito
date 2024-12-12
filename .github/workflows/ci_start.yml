@@ -13,10 +13,12 @@ jobs:
       - name: Checkout code 🛎️
         uses: actions/checkout@v3
 
-      - name: install dependencies
+      - name: Install dependencies
         uses: actions/setup-node@v3
+        with:
+          node-version: '16'
 
-      - name: build project
+      - name: Build project
         run: |
           cd startquito.camaraemprendimiento.ec
           npm install
@@ -25,7 +27,7 @@ jobs:
       - name: deploy to fpt
         uses: airvzxf/ftp-deployment-action@latest
         with:
-          server: startquito.camaraemprendimiento.ec
+          server: ftps://startquito.camaraemprendimiento.ec:21
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: "./startquito.camaraemprendimiento.ec/dist/"
