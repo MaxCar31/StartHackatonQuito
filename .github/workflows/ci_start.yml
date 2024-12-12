@@ -29,5 +29,3 @@ jobs:
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: startquito.camaraemprendimiento.ec/dist/
-          server-dir: startquito.camaraemprendimiento.ec/
-          protocol: ftps
