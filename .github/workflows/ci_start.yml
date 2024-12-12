@@ -26,8 +26,8 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: 178.33.163.55
-          username: ${{ secrets.FTP_USER }}
-          password: ${{ secrets.FTP_PASSWORD }}
+          username: startquitoadmin@startquito.camaraemprendimiento.ec
+          password: RoadToStartHack1234!
           local-dir: startquito.camaraemprendimiento.ec/dist/
           protocol: ftp
           log-level: verbose
