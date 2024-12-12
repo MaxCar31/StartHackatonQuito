@@ -15,7 +15,7 @@ jobs:
 
       - name: install dependencies
         uses: actions/setup-node@v3
-        
+
       - name: build project
         run: |
           cd startquito.camaraemprendimiento.ec
@@ -28,5 +28,5 @@ jobs:
           server: cp7259.webempresa.eu
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: startquito.camaraemprendimiento.ec/dist
-          server-dir: startquito.camaraemprendimiento.ec
+          local-dir: startquito.camaraemprendimiento.ec/dist/
+          server-dir: startquito.camaraemprendimiento.ec/
