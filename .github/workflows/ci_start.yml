@@ -13,19 +13,25 @@ jobs:
       - name: Checkout code 🛎️
         uses: actions/checkout@v3
 
-      - name: install dependencies
+      - name: Install dependencies
         uses: actions/setup-node@v3
+        with:
+          node-version: '16'
 
-      - name: build project
+      - name: Build project
         run: |
           cd startquito.camaraemprendimiento.ec
           npm install
           npm run build
-        
-      - name: deploy to fpt
+
+      - name: Validate build output
+        run: ls -la startquito.camaraemprendimiento.ec/dist/
+
+      - name: Deploy to FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: startquito.camaraemprendimiento.ec
+          server: ftps://startquito.camaraemprendimiento.ec:21
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: startquito.camaraemprendimiento.ec/dist/
+          debug: true
