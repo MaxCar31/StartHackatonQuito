@@ -26,8 +26,8 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: cp7259.webempresa.eu
-          username: ${{ env.FTP_USER }}
-          password: ${{ env.FTP_PASSWORD }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
           local-dir: startquito.camaraemprendimiento.ec/dist/
           server-dir: startquito.camaraemprendimiento.ec/
           protocol: ftps
