@@ -29,6 +29,6 @@ jobs:
           username: "startquitoadmin@startquito.camaraemprendimiento.ec"
           password: "RoadToStartHack1234!"
           local-dir: startquito.camaraemprendimiento.ec/dist/
-          protocol: ftps
+          protocol: ftp
           log-level: verbose
           dry-run: false
